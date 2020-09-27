@@ -1,0 +1,15 @@
+[package]
+name = "maybe-std"
+version = "0.1.0"
+authors = ["Aljoscha Meyer <mail@aljoscha-meyer.de>"]
+edition = "2018"
+license = "CC-PDDC"
+
+[features]
+default = []
+
+std = []
+alloc = []
+unstable = []
+
+[dependencies]
