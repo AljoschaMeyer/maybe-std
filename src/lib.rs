@@ -5,23 +5,23 @@
             feature(raw_vec_internals, wake_trait, asm, concat_idents, format_args_nl, global_asm,
                 llvm_asm, log_syntax, trace_macros))]
 #[cfg(feature = "alloc")]
-extern crate alloc;
+extern crate alloc as alloc_;
 
 #[cfg(feature = "std")]
 pub use std::*;
 
 #[cfg(all(feature = "alloc", not(feature = "std")))]
 mod alloc_stuff {
-    pub use super::alloc::alloc;
-    pub use super::alloc::borrow;
-    pub use super::alloc::boxed;
-    pub use super::alloc::collections;
-    pub use super::alloc::fmt;
-    pub use super::alloc::rc;
-    pub use super::alloc::slice;
-    pub use super::alloc::str;
-    pub use super::alloc::string;
-    pub use super::alloc::vec;
+    pub use super::alloc_::alloc;
+    pub use super::alloc_::borrow;
+    pub use super::alloc_::boxed;
+    pub use super::alloc_::collections;
+    pub use super::alloc_::fmt;
+    pub use super::alloc_::rc;
+    pub use super::alloc_::slice;
+    pub use super::alloc_::str;
+    pub use super::alloc_::string;
+    pub use super::alloc_::vec;
 
     pub use core::any;
     pub use core::arch;
@@ -66,14 +66,14 @@ mod alloc_stuff {
 
     pub mod prelude {
         pub mod v1 {
-            pub use super::super::super::alloc::borrow::ToOwned;
-            pub use super::super::super::alloc::boxed::Box;
-            pub use super::super::super::alloc::string::String;
-            pub use super::super::super::alloc::string::ToString;
-            pub use super::super::super::alloc::vec::Vec;
+            pub use super::super::super::alloc_::borrow::ToOwned;
+            pub use super::super::super::alloc_::boxed::Box;
+            pub use super::super::super::alloc_::string::String;
+            pub use super::super::super::alloc_::string::ToString;
+            pub use super::super::super::alloc_::vec::Vec;
 
-            pub use super::super::super::alloc::format;
-            pub use super::super::super::alloc::vec;
+            pub use super::super::super::alloc_::format;
+            pub use super::super::super::alloc_::vec;
 
             pub use core::prelude::v1::*;
         }
@@ -83,12 +83,12 @@ mod alloc_stuff {
         pub use core::task::*;
 
         #[cfg(feature = "unstable")]
-        pub use super::super::alloc::task::*;
+        pub use super::super::alloc_::task::*;
     }
 
     pub mod sync {
         pub use core::sync::*;
-        pub use alloc::sync::*;
+        pub use alloc_::sync::*;
     }
 
     pub use core::assert;

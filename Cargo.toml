@@ -2,7 +2,7 @@
 name = "maybe-std"
 description = "Helper crate for writing rust libraries with an optional dependency on the standard library."
 repository = "https://github.com/AljoschaMeyer/maybe-std"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Aljoscha Meyer <mail@aljoscha-meyer.de>"]
 edition = "2018"
 license = "CC-PDDC"
