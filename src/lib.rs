@@ -21,7 +21,6 @@ mod alloc_stuff {
     pub use super::alloc::slice;
     pub use super::alloc::str;
     pub use super::alloc::string;
-    pub use super::alloc::sync;
     pub use super::alloc::vec;
 
     pub use core::any;
@@ -85,6 +84,11 @@ mod alloc_stuff {
 
         #[cfg(feature = "unstable")]
         pub use super::super::alloc::task::*;
+    }
+
+    pub mod sync {
+        pub use core::sync::*;
+        pub use alloc::sync::*;
     }
 
     pub use core::assert;

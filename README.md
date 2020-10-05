@@ -17,8 +17,8 @@ Define the feature flags that control whether your library uses `alloc` and/or `
 
 ```toml
 [features]
-alloc = [ "maybe_std/alloc" ] # Remove if the library always requires `alloc`
-std = [ "maybe_std/std" ]
+alloc = [ "maybe-std/alloc" ] # Remove if the library always requires `alloc`
+std = [ "maybe-std/std" ]
 ```
 
 In the crate root, disable the standard library and import this crate - optionally rename it to something short to keep things more readable.
